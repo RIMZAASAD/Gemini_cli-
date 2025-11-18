@@ -1,23 +1,42 @@
-# Gemini CLI Complete Guide: Setup & Configuration
-
-## What is Gemini CLI?
-
-Gemini CLI is an open-source AI agent that runs directly in your terminal. It assists with coding, file operations, debugging, server setup, and automation. It also supports MCP servers.
-
-### Free Tier Benefits:
-
-* 60 requests per minute
-* 1,000 requests per day (with Google account login)
+Here you go!
+I’ve rewritten your entire document **in clean, professional English**, added **guidance/explanations**, fixed structure, and made it look like a perfect **GitHub README** for ranking + clarity.
 
 ---
 
-## Installation & Setup
+# 🌟 **Gemini CLI – Complete Guide (Setup + Usage + Commands)**
 
-### Requirements
+Gemini CLI is an open-source AI agent that runs directly in your terminal. It can write code, analyze files, debug programs, create folders, automate workflows, and communicate with MCP servers.
 
-* Node.js 20+
+This guide provides everything you need to install, configure, and fully use the Gemini CLI with proper explanations.
 
-### Installation Steps
+---
+
+# 🚀 **What is Gemini CLI?**
+
+Gemini CLI is a command-line interface that gives you direct access to Google’s Gemini models.
+You can:
+
+* Generate and edit code
+* Read/write files
+* Run shell commands
+* Automate tasks
+* Use tools like Google Search, file operations, and more
+* Work with GEMINI.md context files
+
+### ✅ **Free Tier Limits**
+
+* **60 requests per minute**
+* **1,000 requests per day** (when logged in with a Google account)
+
+---
+
+# 🛠️ **Installation & Setup**
+
+### **Requirements**
+
+* Node.js **20+**
+
+### **Installation Commands**
 
 ```bash
 npm install -g @google/gemini-cli
@@ -27,106 +46,123 @@ npm upgrade -g @google/gemini-cli
 
 ---
 
-## First Launch
+# 🧩 **First Launch**
+
+Start Gemini CLI:
 
 ```bash
 gemini
 ```
 
-### Initial Setup
+### **Initial Setup Steps**
 
-1. Choose Theme
-2. Choose Authentication Method:
+1. Choose a **Theme** (Light/Dark)
+2. Select **Authentication Method**:
 
-   * Google Login
+   * Google Login (recommended)
    * Gemini API Key
-   * Vertex AI
+   * Vertex AI Service Account
 
 ---
 
-## Interface Overview
+# 🖥️ **Interface Overview**
 
-### Essential Commands
+Gemini CLI works like a chat inside your terminal with extra tools & file control.
+
+### **Essential Commands**
 
 ```bash
-/help
-/docs
-/stats
-/tools
-/quit
+/help        → Show all commands
+/docs        → Documentation
+/stats       → Usage stats
+/tools       → List available tools
+/quit        → Exit the CLI
 ```
 
-### File Referencing
+### **File Referencing**
+
+Use **@filename** to give Gemini access to files.
 
 ```bash
 @app.py
 @README.md
+@components/Header.tsx
 ```
 
-### Shell Mode
+### **Shell Mode**
 
 ```bash
-!
-pwd
-ESC
+!      → Enter shell mode
+pwd    → Run commands
+ESC    → Exit shell mode
 ```
+
+Shell mode allows running system commands without leaving Gemini.
 
 ---
 
-## Command Line Options
+# ⚙️ **Command Line Options**
 
-### Version Check
+### **Version Check**
 
 ```bash
 gemini -v
 gemini --version
 ```
 
-### Model Selection
+### **Model Selection**
 
 ```bash
 gemini -m "gemini-flash-2.5"
 gemini -m "gemini-pro-2.5"
 ```
 
-### Single Prompt Mode
+### **Prompt Without Opening Chat**
 
 ```bash
-gemini -p "your prompt"
-gemini "your prompt"
+gemini -p "write a python function"
+gemini "convert js to ts"
 ```
 
-### Debug Mode
+### **Debug Mode**
+
+Shows detailed logs.
 
 ```bash
 gemini -d
 gemini -d -p "your prompt"
 ```
 
-### Session Summary
+### **Save Summary to File**
 
 ```bash
 gemini --session-summary "session.txt"
 ```
 
-### YOLO Mode
+### **YOLO Mode**
+
+Runs tools without asking permission.
 
 ```bash
 gemini -y
 gemini --yolo
 ```
 
+⚠️ Not recommended unless needed.
+
 ---
 
-## GEMINI.md Files
+# 📁 **GEMINI.md Files**
 
-### File Hierarchy
+Gemini reads context from special files named **GEMINI.md**.
 
-1. Global → `~/.gemini/GEMINI.md`
-2. Project Root
-3. Local Folder Rules
+### **Hierarchy (Priority Order)**
 
-### Context Management
+1. **Global file** → `~/.gemini/GEMINI.md`
+2. **Project root folder**
+3. **Local subfolders**
+
+### **Memory/Context Commands**
 
 ```bash
 /memory show
@@ -135,13 +171,15 @@ gemini --yolo
 
 ---
 
-## Tools
+# 🧰 **Available Tools**
+
+List tools:
 
 ```bash
 /tools
 ```
 
-Tools include:
+Common tools:
 
 * GoogleSearch
 * ReadFile
@@ -149,46 +187,49 @@ Tools include:
 * mkdir
 * Shell
 
----
-
-## Best Practices
-
-### DO:
-
-* Start Gemini CLI from your project directory
-* Review tool permissions
-* Use GEMINI.md for consistency
-
-### DON'T:
-
-* Run from the home directory
-* Use YOLO mode by default
+Each tool may need permissions unless running in YOLO mode.
 
 ---
 
-## Common Workflows
+# ⭐ **Best Practices**
 
-### Quick Git Help
+### ✅ **DO**
+
+* Open Gemini from **your project folder**
+* Add project rules to **GEMINI.md**
+* Allow tool permissions after reviewing
+
+### ❌ **DON’T**
+
+* Start Gemini from your home directory (`~`)
+* Use YOLO mode all the time
+* Place GEMINI.md randomly
+
+---
+
+# 🔄 **Common Workflows**
+
+### **1. Ask for Git Help**
 
 ```bash
 gemini "show me git commands for rebasing"
 ```
 
-### Generate Code
+### **2. Generate Code in a Project**
 
 ```bash
 cd my-project
 gemini
 ```
 
-### Modify Files
+### **3. Modify a File**
 
 ```bash
 gemini
-> In @app.py add error handling
+> In @app.py add error handling logic
 ```
 
-### Restore Checkpoint
+### **4. Restore a Checkpoint**
 
 ```bash
 gemini -c
@@ -197,25 +238,27 @@ gemini -c
 
 ---
 
-## Troubleshooting
+# 🛠️ **Troubleshooting**
 
-### Flash Model Issue
+### **Flash Model Issue**
 
-* Free tier quota may auto-switch to Flash model.
+If quota is low, Gemini CLI may auto-switch to **Flash model**.
 
-### Context Not Loading
+### **Context Not Loading**
+
+Use debug mode:
 
 ```bash
 gemini -d
 ```
 
-### Port Conflict
+### **Port Already in Use**
 
-* Gemini CLI will suggest a new port.
+Gemini will suggest a new port automatically.
 
 ---
 
-## Extra Commands
+# 📚 **Extra Commands**
 
 ```bash
 /checkpoint save
@@ -240,7 +283,7 @@ gemini -d
 
 ---
 
-## Quick Reference
+# ⚡ **Quick Reference (Cheat Sheet)**
 
 ```bash
 npm install -g @google/gemini-cli
@@ -255,3 +298,6 @@ gemini -c
 !
 @file
 ```
+
+---
+\
