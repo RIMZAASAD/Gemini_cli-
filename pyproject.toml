@@ -1,0 +1,12 @@
+[project]
+name = "simple-calculator"
+version = "0.1.0"
+description = "A simple calculator"
+authors = [{ name = "Gemini", email = "gemini@google.com" }]
+dependencies = [
+    "streamlit",
+]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
