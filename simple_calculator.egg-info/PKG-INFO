@@ -1,6 +1,0 @@
-Metadata-Version: 2.4
-Name: simple-calculator
-Version: 0.1.0
-Summary: A simple calculator
-Author-email: Gemini <gemini@google.com>
-Requires-Dist: streamlit
