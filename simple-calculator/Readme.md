@@ -85,12 +85,11 @@ Gemini will return the result.
 * **Streamlit**
 * **Python**
 
----
+
 
 ## 👩‍💻 Author
 
 Made by Rimza.
 
-```
 
 =
